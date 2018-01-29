@@ -24,6 +24,7 @@ namespace Solon
         {
             InitializeComponent();
             Console.WriteLine("Here we go!");
+            Console.WriteLine("ItsMuri was here. Patakist fehlt noch...");
         }
     }
 }
