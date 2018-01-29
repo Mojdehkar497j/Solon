@@ -23,6 +23,7 @@ namespace Solon
         public MainWindow()
         {
             InitializeComponent();
+            Console.WriteLine("Here we go!");
         }
     }
 }
