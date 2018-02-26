@@ -11,7 +11,7 @@ namespace Solon
 {
     class Netzwerk
     {
-        static void Netzwerkkonfig()
+        public void Netzwerkkonfig()
         {
             var localEndpoint = new IPEndPoint(IPAddress.Loopback, 4040);
             TcpClient client = new TcpClient(localEndpoint);

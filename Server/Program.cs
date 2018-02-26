@@ -15,7 +15,7 @@ namespace Server
         static void Main(string[] args)
         {
             Console.WriteLine("Hallo Welt!");
-            IPEndPoint localendp = new IPEndPoint(IPAddress.Loopback, 8877);
+            IPEndPoint localendp = new IPEndPoint(IPAddress.Loopback, 4242);
             TcpListener listener = new TcpListener(localendp);
             listener.Start();
             Console.WriteLine("Server");
