@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -14,24 +15,36 @@ namespace Server
         static void Main(string[] args)
         {
             Console.WriteLine("Hallo Welt!");
-            var myEndPoint = new IPEndPoint(IPAddress.Any, 4242);
-            TcpListener myListener = new TcpListener(myEndPoint);
-            myListener.Start();
-            while (true)
+            IPEndPoint localendp = new IPEndPoint(IPAddress.Loopback, 8877);
+            TcpListener listener = new TcpListener(localendp);
+            listener.Start();
+            Console.WriteLine("Server");
+
+            using (TcpClient tcpClient = listener.AcceptTcpClient())
             {
-                ThreadPool.QueueUserWorkItem((listening) =>
+                using (NetworkStream stream = tcpClient.GetStream())
                 {
-                    using (TcpClient myClient = myListener.AcceptTcpClient())
+                    
+                    while (true)
                     {
-                        using (NetworkStream myNetworkStream = myClient.GetStream())
+                        using (var reader = new StreamReader(stream, Encoding.ASCII, true, 4096, leaveOpen: true))
                         {
-                            //BufferSize: 1024
-                            //Encoding: Default
+                            string response = reader.ReadLine();
+                            Console.WriteLine(response);
+                        }
+
+                        using (var writer = new StreamWriter(stream, Encoding.ASCII, 4096, leaveOpen: true))
+                        {
+                            string message = Convert.ToString(writer.GetHashCode());
+                            writer.WriteLine(message);
 
                         }
                     }
-                });
+                }
             }
+
+            //Console.ReadKey();
+        
         }
     }
 }
