@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solon", "Solon\Solon.csproj", "{21EA988B-8E10-45A8-B557-FD900297D67B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client-Solon", "Solon\Client-Solon.csproj", "{21EA988B-8E10-45A8-B557-FD900297D67B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{3090ABF9-173D-4B8B-B07C-682064044285}"
 EndProject
