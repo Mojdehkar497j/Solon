@@ -26,11 +26,23 @@ namespace Solon
         {
             InitializeComponent();
             Console.WriteLine("Here we go!");
-
             Solon.Netzwerk myClass = new Solon.Netzwerk();
             myClass.Netzwerkkonfig();
         }
-        
+        /*static void Netzwerk()
+        {
+            
+            var localEndpoint = new IPEndPoint(IPAddress.Loopback, 4040);
+            TcpClient client = new TcpClient(localEndpoint);
+
+            client.SendTimeout = 3000;
+            client.ReceiveTimeout = 3000;
+
+            var remoteEndpoint = new IPEndPoint(IPAddress.Loopback, 4242);
+            client.Connect(remoteEndpoint);
+
+
+        }*/
 
         private void b_reg_Click(object sender, RoutedEventArgs e)
         {
