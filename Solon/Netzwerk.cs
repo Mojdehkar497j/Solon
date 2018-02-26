@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using System.IO;
 
 namespace Solon
 {
@@ -20,6 +21,23 @@ namespace Solon
 
             var remoteEndpoint = new IPEndPoint(IPAddress.Loopback, 4242);
             client.Connect(remoteEndpoint);
+
+            using (NetworkStream stream = client.GetStream())
+            {
+                while (true)
+                {
+                    using (var writer = new StreamWriter(stream, Encoding.ASCII, 4096, leaveOpen: true))
+                    {
+                        writer.WriteLine("Hello World!");
+                    }
+
+                    using (var reader = new StreamReader(stream, Encoding.ASCII, true, 4096, leaveOpen: true))
+                    {
+                        string response = reader.ReadLine();
+                        Console.WriteLine(response);
+                    }
+                }
+            }
         }
     }
 }
