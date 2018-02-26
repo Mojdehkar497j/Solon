@@ -27,7 +27,6 @@ namespace Server
                         {
                             //BufferSize: 1024
                             //Encoding: Default
-
                         }
                     }
                 });
