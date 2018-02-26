@@ -11,7 +11,7 @@ namespace Solon
 {
     class Netzwerk
     {
-        static void Netzwerkkonfig()
+        public void Netzwerkkonfig()
         {
             var localEndpoint = new IPEndPoint(IPAddress.Loopback, 4040);
             TcpClient client = new TcpClient(localEndpoint);
@@ -24,8 +24,8 @@ namespace Solon
 
             using (NetworkStream stream = client.GetStream())
             {
-                while (true)
-                {
+                
+                
                     using (var writer = new StreamWriter(stream, Encoding.ASCII, 4096, leaveOpen: true))
                     {
                         writer.WriteLine("Hello World!");
@@ -36,7 +36,7 @@ namespace Solon
                         string response = reader.ReadLine();
                         Console.WriteLine(response);
                     }
-                }
+                
             }
         }
     }
