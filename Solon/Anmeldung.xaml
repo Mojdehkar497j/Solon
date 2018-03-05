@@ -8,7 +8,7 @@
         Title="Anmeldung" WindowState="Maximized">
     <Grid>
         <Button x:Name="b_reg" Content="Registrieren" HorizontalAlignment="Center" Margin="320,276,318,192" Width="122" RenderTransformOrigin="0.533,0.525" Height="36" Click="b_reg_Click"/>
-        <Button x:Name="b_anmelden" Content="Anmelden" HorizontalAlignment="Center" Margin="320,202,319,266" Width="121" Height="36"/>
+        <Button x:Name="b_anmelden" Content="Anmelden" HorizontalAlignment="Center" Margin="320,202,319,266" Width="121" Height="36" Click="b_anmelden_Click"/>
         <Label Content="SOLON" HorizontalAlignment="Center"   Width="137" FontSize="36" Height="52" Margin="320,68,303,384" />
 
     </Grid>

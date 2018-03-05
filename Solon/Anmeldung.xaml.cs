@@ -50,5 +50,12 @@ namespace Solon
             reg.Show();
             this.Close();
         }
+
+        private void b_anmelden_Click(object sender, RoutedEventArgs e)
+        {
+            AnmeldeBlatt anm = new AnmeldeBlatt();
+            anm.Show();
+            this.Close();
+        }
     }
 }
