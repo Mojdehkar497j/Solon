@@ -13,11 +13,11 @@ namespace Solon
     {
         public void Netzwerkkonfig()
         {
-            var localEndpoint = new IPEndPoint(IPAddress.Loopback, 4040);
+            var localEndpoint = new IPEndPoint(IPAddress.Loopback, 0);
             TcpClient client = new TcpClient(localEndpoint);
 
-            client.SendTimeout = 3000;
-            client.ReceiveTimeout = 3000;
+            client.SendTimeout = 0;
+            client.ReceiveTimeout = 0;
 
             var remoteEndpoint = new IPEndPoint(IPAddress.Loopback, 4242);
             client.Connect(remoteEndpoint);

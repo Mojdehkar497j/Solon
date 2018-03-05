@@ -20,14 +20,20 @@ namespace Server
             listener.Start();
             Console.WriteLine("Server");
 
-            using (TcpClient tcpClient = listener.AcceptTcpClient())
+            //for (int i = 0; i < 101; i++)
+            //{
+            while (true)
             {
-                using (NetworkStream stream = tcpClient.GetStream())
+                TcpClient tcpClient = listener.AcceptTcpClient();
+
+                Task.Run(() =>
                 {
-                    
+                    NetworkStream stream = tcpClient.GetStream();
+
                     while (true)
                     {
-                        using (var reader = new StreamReader(stream, Encoding.ASCII, true, 4096, leaveOpen: true))
+                        using (var reader = new StreamReader(stream, Encoding.ASCII, true, 4096,
+                            leaveOpen: true))
                         {
                             string response = reader.ReadLine();
                             Console.WriteLine(response);
@@ -37,14 +43,15 @@ namespace Server
                         {
                             string message = Convert.ToString(writer.GetHashCode());
                             writer.WriteLine(message);
-
                         }
                     }
-                }
+                });
             }
-
-            //Console.ReadKey();
-        
         }
+
+        //}
+
+
+        //Console.ReadKey();
     }
 }
