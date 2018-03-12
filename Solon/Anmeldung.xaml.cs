@@ -25,7 +25,7 @@ namespace Solon
         public MainWindow()
         {
             InitializeComponent();
-            Console.WriteLine("Here we go!");
+            MessageBox.Show("Here we go!");
             Solon.Netzwerk myClass = new Solon.Netzwerk();
             myClass.Netzwerkkonfig();
         }

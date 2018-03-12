@@ -41,8 +41,9 @@ namespace Server
 
                         using (var writer = new StreamWriter(stream, Encoding.ASCII, 4096, leaveOpen: true))
                         {
-                            string message = Convert.ToString(writer.GetHashCode());
-                            writer.WriteLine(message);
+                            string msg = "abc";
+                            writer.WriteLine(msg);
+                            //writer.WriteLine(message);
                         }
                     }
                 });
