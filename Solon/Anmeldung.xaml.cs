@@ -25,7 +25,7 @@ namespace Solon
         public MainWindow()
         {
             InitializeComponent();
-            MessageBox.Show("Here we go!");
+            Console.WriteLine("Here we go!");
             Solon.Netzwerk myClass = new Solon.Netzwerk();
             myClass.Netzwerkkonfig();
         }
@@ -56,7 +56,6 @@ namespace Solon
             AnmeldeBlatt anm = new AnmeldeBlatt();
             anm.Show();
             this.Close();
-
         }
     }
 }
