@@ -23,5 +23,12 @@ namespace Solon
         {
             InitializeComponent();
         }
+
+        private void b_back_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow anmeldung = new MainWindow();
+            anmeldung.Show();
+            this.Close();
+        }
     }
 }
