@@ -32,14 +32,14 @@ namespace Server
 
                     while (true)
                     {
-                        using (var reader = new StreamReader(stream, Encoding.ASCII, true, 4096,
-                            leaveOpen: true))
+                        var reader = new StreamReader(stream, Encoding.ASCII, true, 4096,
+                            leaveOpen: true);
                         {
                             string response = reader.ReadLine();
                             Console.WriteLine(response);
                         }
 
-                        using (var writer = new StreamWriter(stream, Encoding.ASCII, 4096, leaveOpen: true))
+                        var writer = new StreamWriter(stream, Encoding.ASCII, 4096, leaveOpen: true);
                         {
                             string msg = "abc";
                             writer.WriteLine(msg);
