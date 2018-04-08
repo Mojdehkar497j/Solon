@@ -5,13 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Solon"
         mc:Ignorable="d"
-        Title="Registrierblatt" WindowState="Maximized">
+        Title="Registrierblatt" WindowState="Maximized" Height="725">
     <Grid>
-        <Button x:Name="b_reg" Content="Registrieren!" HorizontalAlignment="Center" Width="138" Height="36" FontSize="20" Margin="308,388,314,80"/>
-        <TextBox x:Name="tb_Name" HorizontalAlignment="Center" Height="23" Margin="317,185,323,296" TextWrapping="Wrap" Text="Username:"  Width="120" FontSize="18"/>
-        <TextBox x:Name="tb_passw" HorizontalAlignment="Center" Height="23" Margin="317,252,323,229" TextWrapping="Wrap" Text="Passwort:"  Width="120" TextChanged="TextBox_TextChanged" FontSize="18"/>
-        <TextBox x:Name="tb_passwb" HorizontalAlignment="Center" Height="23" Margin="317,311,323,170" TextWrapping="Wrap" Text="Passwort bestätigen:" Width="120" FontSize="18"/>
-        <Label Content="SOLON" HorizontalAlignment="Center" Margin="308,48,314,400" RenderTransformOrigin="0.423,0.803" Height="56" Width="138" FontSize="36"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Button x:Name="b_reg" Content="Registrieren" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,400,0,0" Width="150" Height="30" FontSize="20"  Grid.Column="1" Click="b_reg_Click"/>
+        <TextBox x:Name="tb_Name" HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Margin="0,300,0,0" TextWrapping="Wrap" Text="Username:"  Width="150" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="tb_passw" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,350,0,0" Height="30" TextWrapping="Wrap" Text="Passwort:"  Width="150" FontSize="18" Grid.Column="1"/>
+        <Button x:Name="b_back" Content="Zurück" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,480,0,0" Width="150" Height="30" FontSize="20" Grid.Column="1" Click="b_back_Click"/>
+        <Label Content="SOLON" HorizontalAlignment="Center" Width="150" Height="50" FontSize="36" VerticalAlignment="Top"  Margin="0,100,0,0" Grid.Column="1" FontStyle="Italic" />
 
     </Grid>
 </Window>
