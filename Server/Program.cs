@@ -16,8 +16,10 @@ namespace Server
         {
             Console.WriteLine("Hallo Welt!");
             Console.WriteLine("Karten werden generiert...");
-            SpieldeckServer myKarten = new SpieldeckServer();
-            string[] kartenPool = new string[52];
+            
+            Spiel myGame = new Spiel();
+            
+            /*string[] kartenPool = new string[52];
             myKarten.Deck[0] = "hKo";
             myKarten.Deck[1] = "hDa";
             myKarten.Deck[2] = "hBu";
@@ -69,7 +71,7 @@ namespace Server
             myKarten.Deck[48] = "pVi";
             myKarten.Deck[49] = "pDr";
             myKarten.Deck[50] = "pZw";
-            myKarten.Deck[51] = "pAs";
+            myKarten.Deck[51] = "pAs";*/
 
 
             IPEndPoint localendp = new IPEndPoint(IPAddress.Loopback, 8877);

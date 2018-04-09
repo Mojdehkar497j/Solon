@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-    class Karte:SpieldeckServer
+    class Karte:EigenschaftenKarte
     {
         public object myKarte { get; set; }
-        public Karte(enum Farbe,enum Typ,enum Wert)
+        public Karte(object Farbe, object Typ, object Wert, bool Verdeckt)
         {
             
         }
