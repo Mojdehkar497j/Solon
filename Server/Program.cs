@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -18,7 +20,13 @@ namespace Server
             Console.WriteLine("Karten werden generiert...");
             
             Spiel myGame = new Spiel();
-            
+            MemoryStream memStream = new MemoryStream();
+            var serializer = new DataContractSerializer(myGame.GetType());
+            serializer.WriteObject(memStream,myGame);
+            memStream.Position = 0;
+            Spiel myDeserializedGame = (Spiel) serializer.ReadObject(memStream);
+
+
             /*string[] kartenPool = new string[52];
             myKarten.Deck[0] = "hKo";
             myKarten.Deck[1] = "hDa";

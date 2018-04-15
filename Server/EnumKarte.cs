@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-    class EigenschaftenKarte
-    {
+   
+   
         public enum Farbe
         {
             Rot,
@@ -39,6 +39,6 @@ namespace Server
             Zwei
         }
 
-        public bool Verdeckt;
-    }
+        
+    
 }
