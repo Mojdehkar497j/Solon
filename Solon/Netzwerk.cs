@@ -20,7 +20,7 @@ namespace Solon
             //client.SendTimeout = 3000;
             //client.ReceiveTimeout = 3000;
 
-            var remoteEndpoint = new IPEndPoint(IPAddress.Loopback, 4242);
+            var remoteEndpoint = new IPEndPoint(IPAddress.Loopback, 8877);
             client.Connect(remoteEndpoint);
 
             NetworkStream stream = client.GetStream();
