@@ -54,9 +54,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AnmeldeBlatt.xaml.cs">
-      <DependentUpon>AnmeldeBlatt.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Netzwerk.cs" />
     <Compile Include="Registrierblatt.xaml.cs">
       <DependentUpon>Registrierblatt.xaml</DependentUpon>
@@ -64,10 +61,6 @@
     <Compile Include="Spiel.xaml.cs">
       <DependentUpon>Spiel.xaml</DependentUpon>
     </Compile>
-    <Page Include="AnmeldeBlatt.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Auswahl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,6 +114,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\10C.png" />
+    <Resource Include="Images\10D.png" />
+    <Resource Include="Images\10H.png" />
+    <Resource Include="Images\10S.png" />
+    <Resource Include="Images\2C.png" />
+    <Resource Include="Images\2D.png" />
+    <Resource Include="Images\2H.png" />
+    <Resource Include="Images\2S.png" />
+    <Resource Include="Images\3C.png" />
+    <Resource Include="Images\3D.png" />
+    <Resource Include="Images\3H.png" />
+    <Resource Include="Images\3S.png" />
+    <Resource Include="Images\4C.png" />
+    <Resource Include="Images\4D.png" />
+    <Resource Include="Images\4H.png" />
+    <Resource Include="Images\4S.png" />
+    <Resource Include="Images\5C.png" />
+    <Resource Include="Images\5D.png" />
+    <Resource Include="Images\5H.png" />
+    <Resource Include="Images\5S.png" />
+    <Resource Include="Images\6C.png" />
+    <Resource Include="Images\6D.png" />
+    <Resource Include="Images\6H.png" />
+    <Resource Include="Images\6S.png" />
+    <Resource Include="Images\7C.png" />
+    <Resource Include="Images\7D.png" />
+    <Resource Include="Images\7H.png" />
+    <Resource Include="Images\7S.png" />
+    <Resource Include="Images\8C.png" />
+    <Resource Include="Images\8D.png" />
+    <Resource Include="Images\8H.png" />
+    <Resource Include="Images\8S.png" />
+    <Resource Include="Images\9C.png" />
+    <Resource Include="Images\9D.png" />
+    <Resource Include="Images\9H.png" />
+    <Resource Include="Images\9S.png" />
+    <Resource Include="Images\AC.png" />
+    <Resource Include="Images\aces.png" />
+    <Resource Include="Images\AD.png" />
+    <Resource Include="Images\AH.png" />
+    <Resource Include="Images\AS.png" />
+    <Resource Include="Images\back_cards-07.png" />
+    <Resource Include="Images\blue_back.png" />
+    <Resource Include="Images\gray_back.png" />
+    <Resource Include="Images\green_back.png" />
+    <Resource Include="Images\honors_spade-14.png" />
+    <Resource Include="Images\honor_clubs.png" />
+    <Resource Include="Images\honor_diamond.png" />
+    <Resource Include="Images\honor_heart-14.png" />
+    <Resource Include="Images\JC.png" />
+    <Resource Include="Images\JD.png" />
+    <Resource Include="Images\JH.png" />
+    <Resource Include="Images\JS.png" />
+    <Resource Include="Images\KC.png" />
+    <Resource Include="Images\KD.png" />
+    <Resource Include="Images\KH.png" />
+    <Resource Include="Images\KS.png" />
+    <Resource Include="Images\purple_back.png" />
+    <Resource Include="Images\QC.png" />
+    <Resource Include="Images\QD.png" />
+    <Resource Include="Images\QH.png" />
+    <Resource Include="Images\QS.png" />
+    <Resource Include="Images\red_back.png" />
+    <Resource Include="Images\yellow_back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

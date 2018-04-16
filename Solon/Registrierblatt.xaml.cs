@@ -28,5 +28,19 @@ namespace Solon
         {
 
         }
+
+        private void b_back_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow anm = new MainWindow();
+            anm.Show();
+            this.Close();
+        }
+
+        private void b_reg_Click(object sender, RoutedEventArgs e)
+        {
+            Spiel spiel = new Spiel();
+            spiel.Show();
+            this.Close();
+        }
     }
 }
