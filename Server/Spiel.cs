@@ -11,14 +11,17 @@ namespace Server
     class Spiel
     {
         //1 spiel = 13 stapel 
-        [DataMember]
         Stapel[] meineStapel = new Stapel[13];
+
         
-        [DataMember]
+
         public Stapel[] MeineStapel
         {
             get { return meineStapel; }
-            set { Stapel[] meineStapel = new Stapel[13];}
+            set { meineStapel = value; }
         }
+        
+        
     }
 }
+    
