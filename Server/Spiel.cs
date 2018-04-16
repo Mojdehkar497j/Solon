@@ -11,17 +11,15 @@ namespace Server
     class Spiel
     {
         //1 spiel = 13 stapel 
-        Stapel[] meineStapel = new Stapel[13];
 
-        
+        Deck[] meineStapel = new Deck[13];
 
-        public Stapel[] MeineStapel
+        public Deck[] MeineStapel
         {
             get { return meineStapel; }
             set { meineStapel = value; }
         }
-        
+
         
     }
 }
-    

@@ -45,10 +45,11 @@
   <ItemGroup>
     <Compile Include="EnumKarte.cs" />
     <Compile Include="Karte.cs" />
-    <Compile Include="Stapel.cs" />
+    <Compile Include="Deck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spiel.cs" />
+    <Compile Include="Stapel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

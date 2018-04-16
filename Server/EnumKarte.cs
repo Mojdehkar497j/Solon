@@ -10,7 +10,7 @@ namespace Server
    
         public enum Farbe
         {
-            Rot,
+            
             Schwarz
         }
 

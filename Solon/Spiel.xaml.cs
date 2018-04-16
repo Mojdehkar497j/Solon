@@ -22,6 +22,9 @@ namespace Solon
         public Spiel()
         {
             InitializeComponent();
+
+
+            
         }
     }
 }

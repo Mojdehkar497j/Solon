@@ -8,7 +8,10 @@ namespace Server
 {
     class Stapel
     {
-        List<Karte> deck = new List<Karte>();
-
+        private List<Karte> meinStapel;
+        public Stapel(List<Karte> deck)
+        {
+            
+        }
     }
 }

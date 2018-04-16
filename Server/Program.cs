@@ -86,6 +86,8 @@ namespace Server
             TcpListener listener = new TcpListener(localendp);
             listener.Start();
             Console.WriteLine("Server ist eingeschalten!");
+            Deck d = new Deck();
+            d.teileInStapel();
 
             using (TcpClient tcpClient = listener.AcceptTcpClient())
             {
@@ -110,6 +112,7 @@ namespace Server
                 }
             }
 
+            
             //Console.ReadKey();
         
         }
