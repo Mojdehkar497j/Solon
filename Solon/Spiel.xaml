@@ -3,6 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:apexControls="clr-namespace:Apex.Controls;assembly=Apex"
+        xmlns:apexCommands="clr-namespace:Apex.Commands;assembly=Apex"
+        xmlns:apexDragAndDrop="clr-namespace:Apex.DragAndDrop;assembly=Apex"
         xmlns:local="clr-namespace:Solon"
         mc:Ignorable="d"
         Title="Klondike" WindowState="Maximized" Height="768" Width="1366">
