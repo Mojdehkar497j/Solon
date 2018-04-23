@@ -14,7 +14,7 @@ namespace Solon
     {
         public void Netzwerkkonfig()
         {
-            var localEndpoint = new IPEndPoint(IPAddress.Loopback, 0);
+            /*var localEndpoint = new IPEndPoint(IPAddress.Loopback, 0);
             TcpClient client = new TcpClient(localEndpoint);
 
             //client.SendTimeout = 3000;
@@ -22,20 +22,21 @@ namespace Solon
 
             var remoteEndpoint = new IPEndPoint(IPAddress.Loopback, 4242);
             client.Connect(remoteEndpoint);
-
+            
             NetworkStream stream = client.GetStream();
-            Senden(stream);
-
+            string msg = "abc";
+            //Senden(stream);
+            */
         }
 
-        public void Senden(NetworkStream stream)
+        /*public void Senden(NetworkStream stream)
         {
 
             Task.Run(() =>
             {
                 var writer = new StreamWriter(stream, Encoding.ASCII, 4096, leaveOpen: true);
                 
-                    writer.WriteLine("Hello World!");
+                    writer.WriteLine("abc");
                 
             });
 
@@ -49,6 +50,35 @@ namespace Solon
             });
                 
             
+        }*/
+
+        public void Senden(string name, string password)
+        {
+            var localEndpoint = new IPEndPoint(IPAddress.Loopback, 0);
+            TcpClient client = new TcpClient(localEndpoint);
+            var remoteEndpoint = new IPEndPoint(IPAddress.Loopback, 4242);
+            client.Connect(remoteEndpoint);
+            NetworkStream stream = client.GetStream();
+
+
+            Task.Run(() =>
+            {
+                var writer = new StreamWriter(stream, Encoding.ASCII, 4096, leaveOpen: true);
+
+                //writer.WriteLine("abc");
+                writer.WriteLine(name);
+                writer.WriteLine(password);
+                writer.Close();
+
+                var reader = new StreamReader(stream, Encoding.ASCII, true, 4096, leaveOpen: true);
+
+                string response = reader.ReadLine();
+                reader.Close();
+                MessageBox.Show(response);
+                
+            });
+
+
         }
     }
 }

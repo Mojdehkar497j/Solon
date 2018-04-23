@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,8 +21,10 @@ namespace Server
             listener.Start();
             Console.WriteLine("Server");
 
-            //for (int i = 0; i < 101; i++)
-            //{
+            NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1;User Id=postgres; " +
+            "Password=postgres;Database=solon;");
+            conn.Open();
+
             while (true)
             {
                 TcpClient tcpClient = listener.AcceptTcpClient();
@@ -32,19 +35,29 @@ namespace Server
 
                     while (true)
                     {
-                        var reader = new StreamReader(stream, Encoding.ASCII, true, 4096,
-                            leaveOpen: true);
-                        {
-                            string response = reader.ReadLine();
-                            Console.WriteLine(response);
-                        }
+                        var reader = new StreamReader(stream, Encoding.ASCII, true, 4096, leaveOpen: true);
+                        
+                            string userName = reader.ReadLine();
+                            Console.WriteLine(userName);
+
+                            string password = reader.ReadLine();
+                            Console.WriteLine(password);
+
+                            NpgsqlCommand command = new NpgsqlCommand("SELECT 'True' FROM users where password='" +
+                            password + "' AND username='" + userName + "'", conn);
+
+                            string angemeldet = (string)command.ExecuteScalar();
+
+                            Console.WriteLine(angemeldet);
+                        
 
                         var writer = new StreamWriter(stream, Encoding.ASCII, 4096, leaveOpen: true);
-                        {
+                        
                             string msg = "abc";
-                            writer.WriteLine(msg);
+                            writer.WriteLine(angemeldet);
                             //writer.WriteLine(message);
-                        }
+                            writer.Close();
+                        
                     }
                 });
             }

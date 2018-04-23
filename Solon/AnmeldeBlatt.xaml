@@ -14,7 +14,7 @@
             <ColumnDefinition Width="257*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="b_reg" Content="Anmelden" HorizontalAlignment="Center" Width="138" Height="36" FontSize="20" Margin="159,390,0,78" Grid.Column="2"/>
+        <Button x:Name="b_reg" Content="Anmelden" HorizontalAlignment="Center" Width="138" Height="36" FontSize="20" Margin="159,390,0,78" Grid.Column="2" Click="b_reg_Click"/>
         <TextBox x:Name="tb_Name" HorizontalAlignment="Center" Height="23" Margin="95,184,82,297" TextWrapping="Wrap" Text="Username:"  Width="120" FontSize="18" Grid.Column="2"/>
         <TextBox x:Name="tb_passw" HorizontalAlignment="Center" Height="23" Margin="95,252,82,229" TextWrapping="Wrap" Text="Passwort:"  Width="120" FontSize="18" Grid.Column="2"/>
         <Label Content="SOLON" HorizontalAlignment="Center" Margin="85,48,74,400" RenderTransformOrigin="0.423,0.803" Height="56" Width="138" FontSize="36" Grid.Column="2"/>
