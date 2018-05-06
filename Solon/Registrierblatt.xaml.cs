@@ -28,5 +28,57 @@ namespace Solon
         {
 
         }
+
+        private void b_back_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow anm = new MainWindow();
+            anm.Show();
+            this.Close();
+        }
+
+        private void b_reg_Click(object sender, RoutedEventArgs e)
+        {
+            Spiel spiel = new Spiel();
+            spiel.Show();
+            this.Close();
+        }
+
+        void TextBox_un_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox box = sender as TextBox;
+            box.Text = string.Empty;
+            box.Foreground = Brushes.Black;
+            box.GotFocus -= TextBox_un_GotFocus;
+        }
+
+        void TextBox_un_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox box = sender as TextBox;
+            if (box.Text.Trim().Equals(string.Empty))
+            {
+                box.Text = "Username:";
+                box.Foreground = Brushes.Black;
+                box.GotFocus += TextBox_un_GotFocus;
+            }
+        }
+
+        void TextBox_pw_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox box = sender as TextBox;
+            box.Text = string.Empty;
+            box.Foreground = Brushes.Black;
+            box.GotFocus -= TextBox_un_GotFocus;
+        }
+
+        void TextBox_pw_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox box = sender as TextBox;
+            if (box.Text.Trim().Equals(string.Empty))
+            {
+                box.Text = "Passwort:";
+                box.Foreground = Brushes.Black;
+                box.GotFocus += TextBox_un_GotFocus;
+            }
+        }
     }
 }

@@ -5,11 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Solon"
         mc:Ignorable="d"
-        Title="Anmeldung" WindowState="Maximized">
+        Title="Anmeldung" WindowState="Maximized" d:DesignHeight="703">
+    <Window.Background>
+        <ImageBrush ImageSource="images/background.jpg"></ImageBrush>
+    </Window.Background>
     <Grid>
-        <Button x:Name="b_reg" Content="Registrieren" HorizontalAlignment="Center" Margin="320,276,318,192" Width="122" RenderTransformOrigin="0.533,0.525" Height="36" Click="b_reg_Click"/>
-        <Button x:Name="b_anmelden" Content="Anmelden" HorizontalAlignment="Center" Margin="320,202,319,266" Width="121" Height="36" Click="b_anmelden_Click"/>
-        <Label Content="SOLON" HorizontalAlignment="Center"   Width="137" FontSize="36" Height="52" Margin="320,68,303,384" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <Button x:Name="b_reg" Content="Registrieren" HorizontalAlignment="Center"  Width="150"  Height="32"  VerticalAlignment="Top" Margin="0,480,0,0" Click="b_reg_Click" Grid.Column="1" FontSize="20"/>
+        <Button x:Name="b_anmelden" Content="Anmelden" HorizontalAlignment="Center"  Width="150" Height="32"  VerticalAlignment="Top" Margin="0,400,0,0" Click="b_anmelden_Click" Grid.Column="1" FontSize="20"/>
+        <Label Content="SOLON" Foreground="White" HorizontalAlignment="Center" Width="150" Height="50" FontSize="36" VerticalAlignment="Top"  Margin="0,100,0,0" Grid.Column="1" FontStyle="Italic" />
+        <TextBox x:Name="tb_Name" HorizontalAlignment="Center" VerticalAlignment="Top" Height="32" Margin="0,300,0,0" TextWrapping="Wrap" Text="Username:"  Width="150" FontSize="18" Grid.Column="1" GotFocus="TextBox_un_GotFocus"
+         LostFocus="TextBox_un_LostFocus"/>
+        <TextBox x:Name="tb_passw" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,350,0,0" Height="32" TextWrapping="Wrap" Text="Passwort:"  Width="150" FontSize="18" Grid.Column="1" GotFocus="TextBox_pw_GotFocus"
+         LostFocus="TextBox_pw_LostFocus" />
     </Grid>
 </Window>
