@@ -21,10 +21,12 @@ namespace Solon
     /// </summary>
     public partial class Spiel : Window
     {
+
         public Spiel()
         {
             InitializeComponent();
 
+            xxx.Source = new BitmapImageSource()
             
             
         }

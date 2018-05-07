@@ -18,13 +18,13 @@ namespace Server
         {
             Console.WriteLine("Hallo Welt!");
             Console.WriteLine("Karten werden generiert...");
-            
+
             Spiel myGame = new Spiel();
             MemoryStream memStream = new MemoryStream();
             var serializer = new DataContractSerializer(myGame.GetType());
-            serializer.WriteObject(memStream,myGame);
+            serializer.WriteObject(memStream, myGame);
             memStream.Position = 0;
-            Spiel myDeserializedGame = (Spiel) serializer.ReadObject(memStream);
+            Spiel myDeserializedGame = (Spiel)serializer.ReadObject(memStream);
 
 
             /*string[] kartenPool = new string[52];
@@ -88,50 +88,36 @@ namespace Server
             Console.WriteLine("Server ist eingeschalten!");
 
             TcpClient tcpClient = listener.AcceptTcpClient();
-            
-                NetworkStream stream = tcpClient.GetStream();
+
+            NetworkStream stream = tcpClient.GetStream();
             //NetworkSenden(stream);
-                    
-                    while (true)
-                    {
-                        using (var reader = new StreamReader(stream, Encoding.ASCII, true, 4096, leaveOpen: true))
-                        {
-                            string response = reader.ReadLine();
-                            Console.WriteLine(response);
-                        }
 
-                        using (var writer = new StreamWriter(stream, Encoding.ASCII, 4096, leaveOpen: true))
-                        {
-                            string message = Convert.ToString(writer.GetHashCode());
-                            writer.WriteLine(message);
-                            
+            while (true)
+            {
+                using (var reader = new StreamReader(stream, Encoding.ASCII, true, 4096, leaveOpen: true))
+                {
+                    string response = reader.ReadLine();
+                    Console.WriteLine(response);
+                }
 
-                        }
-                    }
-                
-            
-            
+                serializer.WriteObject(stream, myGame);
+
+                //using (var writer = new StreamWriter(stream, Encoding.ASCII, 4096, leaveOpen: true))
+                //{
+                //    string message = Convert.ToString(writer.GetHashCode());
+
+                //    writer.WriteLine(message);
+
+
+                //}
+            }
+
+
+
 
             //Console.ReadKey();
 
         }
 
-        public void NetworkSenden(Stream s)
-        {
-            Stream nets = s;
-            var netWriter = new StreamWriter(nets, Encoding.ASCII, 4096, leaveOpen: true);
-            Spiel myGame = new Spiel();
-            Socket sendSocket = new Socket(SocketType.Stream, ProtocolType.Tcp);
-            IPEndPoint localendpoint = new IPEndPoint(IPAddress.Loopback, 8877);
-            sendSocket.Bind(localendpoint);
-
-            NetworkStream netStream = new NetworkStream(sendSocket);
-            //var netWriter = new StreamWriter(netStream, Encoding.ASCII, 4096, leaveOpen: true);
-            var serializer = new DataContractSerializer(myGame.GetType());
-            serializer.WriteObject(netStream, myGame);
-            netStream.Position = 0;
-            
-            //Spiel myDeserializedGame = (Spiel)serializer.ReadObject(netStream);
-        }
     }
 }

@@ -64,6 +64,8 @@
 
         <Canvas Name="r2v1" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
 
+        <Image Name="xxx" Grid.Column="3" Grid.Row="1" Source="Images/10S.png" />
+
         <Canvas Name="r21" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
         <Canvas Name="r22" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
         <Canvas Name="r23" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
