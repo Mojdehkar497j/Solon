@@ -26,7 +26,7 @@ namespace Solon
         {
             InitializeComponent();
 
-            xxx.Source = new BitmapImageSource()
+            //xxx.Source = new BitmapImageSource()
             
             
         }
