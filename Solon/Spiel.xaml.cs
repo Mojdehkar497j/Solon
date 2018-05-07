@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,8 +30,24 @@ namespace Solon
             InitializeComponent();
 
             //xxx.Source = new BitmapImageSource()
+
+            var myEndPoint = new IPEndPoint(IPAddress.Loopback, 0);
+            TcpClient myTcpClient = new TcpClient(myEndPoint);
+            myTcpClient.Connect(IPAddress.Loopback,8877);
+
+            using (NetworkStream stream = myTcpClient.GetStream())
+            {
+                using (StreamWriter writer = new StreamWriter(stream))
+                {
+                    //writer.Write(var msg = Encoding.ASCII.GetBytes("Deck bitte!"));
+                    byte[] msg = Encoding.ASCII.GetBytes("DECK PLS");
+                    writer.Write(msg);
+                }
+                
+            }
+
             
-            
+
         }
     }
 }

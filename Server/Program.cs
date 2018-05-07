@@ -19,6 +19,8 @@ namespace Server
             Console.WriteLine("Hallo Welt!");
             Console.WriteLine("Karten werden generiert...");
 
+            //<summary>
+            /// Hier wird die Serialisierung eingerichtet.
             Spiel myGame = new Spiel();
             MemoryStream memStream = new MemoryStream();
             var serializer = new DataContractSerializer(myGame.GetType());
