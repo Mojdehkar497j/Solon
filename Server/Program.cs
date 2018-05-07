@@ -87,10 +87,10 @@ namespace Server
             listener.Start();
             Console.WriteLine("Server ist eingeschalten!");
 
-            using (TcpClient tcpClient = listener.AcceptTcpClient())
-            {
-                using (NetworkStream stream = tcpClient.GetStream())
-                {
+            TcpClient tcpClient = listener.AcceptTcpClient();
+            
+                NetworkStream stream = tcpClient.GetStream();
+            //NetworkSenden(stream);
                     
                     while (true)
                     {
@@ -104,14 +104,34 @@ namespace Server
                         {
                             string message = Convert.ToString(writer.GetHashCode());
                             writer.WriteLine(message);
+                            
 
                         }
                     }
-                }
-            }
+                
+            
+            
 
             //Console.ReadKey();
-        
+
+        }
+
+        public void NetworkSenden(Stream s)
+        {
+            Stream nets = s;
+            var netWriter = new StreamWriter(nets, Encoding.ASCII, 4096, leaveOpen: true);
+            Spiel myGame = new Spiel();
+            Socket sendSocket = new Socket(SocketType.Stream, ProtocolType.Tcp);
+            IPEndPoint localendpoint = new IPEndPoint(IPAddress.Loopback, 8877);
+            sendSocket.Bind(localendpoint);
+
+            NetworkStream netStream = new NetworkStream(sendSocket);
+            //var netWriter = new StreamWriter(netStream, Encoding.ASCII, 4096, leaveOpen: true);
+            var serializer = new DataContractSerializer(myGame.GetType());
+            serializer.WriteObject(netStream, myGame);
+            netStream.Position = 0;
+            
+            //Spiel myDeserializedGame = (Spiel)serializer.ReadObject(netStream);
         }
     }
 }
