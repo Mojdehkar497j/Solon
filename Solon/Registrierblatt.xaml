@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:Solon"
         mc:Ignorable="d"
         Title="Registrierblatt" WindowState="Maximized" Height="725">
+    <Window.Background>
+        <ImageBrush ImageSource="images/background.jpg"></ImageBrush>
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -13,11 +16,13 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         
-        <Button x:Name="b_reg" Content="Registrieren" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,400,0,0" Width="150" Height="30" FontSize="20"  Grid.Column="1" Click="b_reg_Click"/>
-        <TextBox x:Name="tb_Name" HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Margin="0,300,0,0" TextWrapping="Wrap" Text="Username:"  Width="150" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="tb_passw" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,350,0,0" Height="30" TextWrapping="Wrap" Text="Passwort:"  Width="150" FontSize="18" Grid.Column="1"/>
-        <Button x:Name="b_back" Content="Zurück" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,480,0,0" Width="150" Height="30" FontSize="20" Grid.Column="1" Click="b_back_Click"/>
-        <Label Content="SOLON" HorizontalAlignment="Center" Width="150" Height="50" FontSize="36" VerticalAlignment="Top"  Margin="0,100,0,0" Grid.Column="1" FontStyle="Italic" />
+        <Button x:Name="b_reg" Content="Registrieren" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,400,0,0" Width="150" Height="32" FontSize="20"  Grid.Column="1" Click="b_reg_Click"/>
+        <TextBox x:Name="tb_Name" HorizontalAlignment="Center" VerticalAlignment="Top" Height="32" Margin="0,300,0,0" TextWrapping="Wrap" Text="Username:"  Width="150" FontSize="18" Grid.Column="1" GotFocus="TextBox_un_GotFocus"
+         LostFocus="TextBox_un_LostFocus" />
+        <TextBox x:Name="tb_passw" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,350,0,0" Height="32" TextWrapping="Wrap" Text="Passwort:"  Width="150" FontSize="18" Grid.Column="1" GotFocus="TextBox_pw_GotFocus"
+         LostFocus="TextBox_pw_LostFocus"/>
+        <Button x:Name="b_back" Content="Zurück" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,480,0,0" Width="150" Height="32" FontSize="20" Grid.Column="1" Click="b_back_Click"/>
+        <Label Content="SOLON" Foreground="White" HorizontalAlignment="Center" Width="150" Height="50" FontSize="36" VerticalAlignment="Top"  Margin="0,100,0,0" Grid.Column="1" FontStyle="Italic" />
 
     </Grid>
 </Window>

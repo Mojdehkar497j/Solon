@@ -8,10 +8,17 @@ namespace Server
 {
     class Stapel
     {
-        private List<Karte> meinStapel;
-        public Stapel(List<Karte> deck)
+        public List<Karte> Deck{ get; private set; }   
+        public Stapel()
         {
-            
+            Deck = new List<Karte>();
+            for (int count=0; count<=52; count++)
+            {
+                //Deck[count] = 
+            }
         }
+        
+        
+
     }
 }

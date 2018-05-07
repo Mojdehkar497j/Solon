@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Apex.MVVM;
+using Apex.Extensions;
 
 namespace Solon
 {
@@ -19,11 +21,13 @@ namespace Solon
     /// </summary>
     public partial class Spiel : Window
     {
+
         public Spiel()
         {
             InitializeComponent();
 
-
+            //xxx.Source = new BitmapImageSource()
+            
             
         }
     }

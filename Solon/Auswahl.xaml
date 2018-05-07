@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Solon"
         mc:Ignorable="d"
-        Title="Auswahl" WindowState="Maximized">
+        Title="Registrierblatt" WindowState="Maximized" Height="725">
+    <Window.Background>
+        <ImageBrush ImageSource="images/background.jpg"></ImageBrush>
+    </Window.Background>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="b_sing" Content="Singleplayer" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,400,0,0" Width="150" Height="32" FontSize="20"  Grid.Column="1"/>
+        <Button x:Name="b_mult" Content="Multiplayer" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,480,0,0" Width="150" Height="32" FontSize="20" Grid.Column="1"/>
+        <Label Content="SOLON" Foreground="White" HorizontalAlignment="Center" Width="150" Height="50" FontSize="36" VerticalAlignment="Top"  Margin="0,100,0,0" Grid.Column="1" FontStyle="Italic" />
+
     </Grid>
 </Window>
