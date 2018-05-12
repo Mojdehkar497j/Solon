@@ -43,11 +43,29 @@ namespace Solon
                     byte[] msg = Encoding.ASCII.GetBytes("DECK PLS");
                     writer.Write(msg);
                 }
-                
+                using (var reader = new StreamReader(stream, Encoding.ASCII, true, 4096, leaveOpen: true))
+                {
+                    string response = reader.ReadLine();
+                    Console.WriteLine(response);
+                    MessageBox.Show(response);
+                }
+
             }
 
             
 
         }
+    }
+
+    class Karten
+    {
+        //private var empfangeneKarten;
+
+        //public var EmpfangeneKarten
+        //{
+        //    get { return empfangeneKarten; }
+        //    set { empfangeneKarten = value; }
+        //}
+
     }
 }
