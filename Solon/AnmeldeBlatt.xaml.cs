@@ -41,21 +41,26 @@ namespace Solon
             string password = tb_passw.Text;
             Netzwerk logIn = new Netzwerk();
             logIn.Senden(userName,password);
-            
 
-        //    var localEndpoint = new IPEndPoint(IPAddress.Loopback, 0);
-        //    TcpClient client = new TcpClient(localEndpoint);
+            MainWindow spiel = new MainWindow();
+            spiel.Show();
+            this.Close();
 
-        //    //client.SendTimeout = 3000;
-        //    //client.ReceiveTimeout = 3000;
 
-        //    var remoteEndpoint = new IPEndPoint(IPAddress.Loopback, 4242);
-        //    client.Connect(remoteEndpoint);
 
-        //    NetworkStream stream = client.GetStream();
-        //    Netzwerk login = new Netzwerk();
-           
-        //    login.Senden(stream);
+            //    var localEndpoint = new IPEndPoint(IPAddress.Loopback, 0);
+            //    TcpClient client = new TcpClient(localEndpoint);
+
+            //    //client.SendTimeout = 3000;
+            //    //client.ReceiveTimeout = 3000;
+
+            //    var remoteEndpoint = new IPEndPoint(IPAddress.Loopback, 4242);
+            //    client.Connect(remoteEndpoint);
+
+            //    NetworkStream stream = client.GetStream();
+            //    Netzwerk login = new Netzwerk();
+
+            //    login.Senden(stream);
         }
     }
 }

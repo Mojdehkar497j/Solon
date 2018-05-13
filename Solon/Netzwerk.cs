@@ -75,7 +75,8 @@ namespace Solon
                 string response = reader.ReadLine();
                 reader.Close();
                 MessageBox.Show(response);
-                
+                return "true";
+
             });
 
 
