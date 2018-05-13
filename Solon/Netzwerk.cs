@@ -8,7 +8,7 @@ using System.Net.Sockets;
 using System.IO;
 using System.Windows;
 
-namespace Client
+namespace Solon
 {
     class Netzwerk
     {

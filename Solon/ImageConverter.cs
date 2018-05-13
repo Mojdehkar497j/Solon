@@ -9,7 +9,7 @@ using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace Client
+namespace Solon
 {
     public class ImageSourceConverter : MarkupExtension, IValueConverter
     {

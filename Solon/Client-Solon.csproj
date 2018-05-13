@@ -59,15 +59,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ImageSourceConverter.cs" />
+    <Compile Include="ImageConverter.cs" />
     <Compile Include="Netzwerk.cs" />
-    <Compile Include="OverlapConverter.cs" />
     <Compile Include="Registrierblatt.xaml.cs">
       <DependentUpon>Registrierblatt.xaml</DependentUpon>
     </Compile>
     <Compile Include="Spiel.xaml.cs">
       <DependentUpon>Spiel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OverlapConverter.cs" />
     <Page Include="Auswahl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

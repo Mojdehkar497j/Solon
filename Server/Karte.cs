@@ -4,10 +4,11 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Solon;
 
-namespace Client
+namespace Solon
 {
-    class Karte
+    public class Karte
     {
         private bool verdeckt;
         private Farbe farbe;

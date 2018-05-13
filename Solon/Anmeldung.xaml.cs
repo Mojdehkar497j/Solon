@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Client
+namespace Solon
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
@@ -26,7 +26,7 @@ namespace Client
         {
             InitializeComponent();
             Console.WriteLine("Here we go!");
-            Client.Netzwerk myClass = new Client.Netzwerk();
+            Solon.Netzwerk myClass = new Solon.Netzwerk();
             myClass.Netzwerkkonfig();
         }
         /*static void Netzwerk()

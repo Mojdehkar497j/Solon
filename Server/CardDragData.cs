@@ -5,17 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 
-namespace Server
+namespace Solon
 {
     internal sealed class CardDragData
     {
-        public CardDragData(ObservableCollection<Client.Karte> cards, Client.Karte card)
+        public CardDragData(ObservableCollection<Karte> cards, Karte card)
         {
             Cards = cards;
             Card = card;
         }
 
-        public ObservableCollection<Client.Karte> Cards { get; }
-        public Client.Karte Card { get; }
+        public ObservableCollection<Karte> Cards { get; }
+        public Karte Card { get; }
     }
 }

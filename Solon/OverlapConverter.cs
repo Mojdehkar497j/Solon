@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace Client
+namespace Solon
 {
     public class OverlapConverter : MarkupExtension, IValueConverter
     {
@@ -18,6 +15,7 @@ namespace Client
         {
             return this;
         }
+
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -27,7 +25,7 @@ namespace Client
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();    // not needed for our scenario
+            throw new NotImplementedException();
         }
     }
 }
