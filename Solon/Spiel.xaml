@@ -1,4 +1,4 @@
-﻿<Window x:Class="Solon.Spiel"
+﻿<Window x:Class="Client.Spiel"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:apexControls="clr-namespace:Apex.Controls;assembly=Apex"
         xmlns:apexCommands="clr-namespace:Apex.Commands;assembly=Apex"
         xmlns:apexDragAndDrop="clr-namespace:Apex.DragAndDrop;assembly=Apex"
-        xmlns:local="clr-namespace:Solon"
+        xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
         Title="Klondike" WindowState="Maximized" Height="768" Width="1366">
     <Window.Background>
@@ -32,153 +32,154 @@
             
         </Grid.RowDefinitions>
 
-        <Canvas Name="Waste" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Background="Red"/>
+       
 
-        <Canvas Name="drawbot" Grid.Column="2" HorizontalAlignment="Left" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="drawmid" Grid.Column="2" HorizontalAlignment="Left" Height="150" Width="110" Margin="20,10,0,0" Grid.Row="1" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="drawtop" Grid.Column="2" HorizontalAlignment="Left" Height="150" Width="110" Margin="40,10,0,0" Grid.Row="1" VerticalAlignment="Top" Background="Bisque"/>
+        <Image Name="Waste" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Source="Images/transp.png" />
 
-        <Canvas Name="s1" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Background="Black"/>
+        <Image Name="drawbot" Grid.Column="2" HorizontalAlignment="Left" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Source="Images/transp.png" />
+        <Image Name="drawmid" Grid.Column="2" HorizontalAlignment="Left" Height="150" Width="110" Margin="20,10,0,0" Grid.Row="1" VerticalAlignment="Top" Source="Images/transp.png" />
+        <Image Name="drawtop" Grid.Column="2" HorizontalAlignment="Left" Height="150" Width="110" Margin="40,10,0,0" Grid.Row="1" VerticalAlignment="Top" Source="Images/transp.png" />
 
-        <Canvas Name="s2" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Background="Green"/>
+        <Image Name="s1" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top"  AllowDrop="True" Source="Images/transp.png" />
 
-        <Canvas Name="s3" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Background="DarkBlue"/>
+        <Image Name="s2" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
 
-        <Canvas Name="s4" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Background="Yellow"/>
+        <Image Name="s3" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top"  AllowDrop="True" Source="Images/transp.png" />
 
-
-        <Canvas Name="r11" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2"  VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r12" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r13" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r14" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r15" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r16" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r17" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r18" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r19" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r110" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r111" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r112" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r113" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
+        <Image Name="s4" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top"  AllowDrop="True" Source="Images/transp.png" />
 
 
-        <Canvas Name="r2v1" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
-
-        <Image Name="xxx" Grid.Column="3" Grid.Row="1" Source="Images/10S.png" />
-
-        <Canvas Name="r21" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r22" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r23" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r24" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r25" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r26" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r27" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r28" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r29" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r210" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r211" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r212" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r213" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
+        <Image  Name="r11" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2"  VerticalAlignment="Top"  AllowDrop="True" Source="Images/KC.png"/>
+        <Image Name="r12" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/QC.png" />
+        <Image Name="r13" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top"  AllowDrop="True" Source="Images/JC.png" />
+        <Image Name="r14" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top"  AllowDrop="True" Source="Images/10C.png" />
+        <Image Name="r15" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top"  AllowDrop="True" Source="Images/9C.png"/>
+        <Image Name="r16" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top"  AllowDrop="True" Source="Images/8C.png" />
+        <Image Name="r17" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top"  AllowDrop="True" Source="Images/7C.png" />
+        <Image Name="r18" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top"  AllowDrop="True" Source="Images/6C.png" />
+        <Image Name="r19" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top"  AllowDrop="True" Source="Images/5C.png" />
+        <Image Name="r110" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top"  AllowDrop="True" Source="Images/4C.png" />
+        <Image Name="r111" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/3C.png" />
+        <Image Name="r112" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top"  AllowDrop="True" Source="Images/2C.png" />
+        <Image Name="r113" Grid.Column="1" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top"  AllowDrop="True" Source="Images/AC.png" />
 
 
-        <Canvas Name="r3v1" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
-        <Canvas Name="r3v2" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Gray"/>
-
-        <Canvas Name="r31" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r32" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r33" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r34" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r35" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r36" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r37" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r38" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r39" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r310" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r311" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r312" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r313" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
+        <Image Name="r2v1" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
 
 
-        <Canvas Name="r4v1" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
-        <Canvas Name="r4v2" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Gray"/>
-        <Canvas Name="r4v3" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
-
-        <Canvas Name="r41" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r42" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r43" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r44" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r45" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r46" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r47" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r48" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r49" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r410" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r411" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r412" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r413" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
+        <Image Name="r21" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/KD.png" />
+        <Image Name="r22" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/QD.png" />
+        <Image Name="r23" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/JD.png" />
+        <Image Name="r24" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/10D.png" />
+        <Image Name="r25" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/9D.png" />
+        <Image Name="r26" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/8D.png" />
+        <Image Name="r27" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/7D.png" />
+        <Image Name="r28" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/6D.png" />
+        <Image Name="r29" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/5D.png" />
+        <Image Name="r210" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/4D.png" />
+        <Image Name="r211" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/3D.png" />
+        <Image Name="r212" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/2D.png" />
+        <Image Name="r213" Grid.Column="2" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/AD.png" />
 
 
-        <Canvas Name="r5v1" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
-        <Canvas Name="r5v2" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Gray"/>
-        <Canvas Name="r5v3" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
-        <Canvas Name="r5v4" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Gray"/>
+        <Image Name="r3v1" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png"/>
+        <Image Name="r3v2" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
 
-        <Canvas Name="r51" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r52" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r53" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r54" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r55" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r56" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r57" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r58" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r59" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r510" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r511" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r512" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r513" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
+        <Image Name="r31" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/KH.png" />
+        <Image Name="r32" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/QH.png" />
+        <Image Name="r33" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/JH.png" />
+        <Image Name="r34" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/10H.png" />
+        <Image Name="r35" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/9H.png" />
+        <Image Name="r36" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/8H.png" />
+        <Image Name="r37" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/7H.png" />
+        <Image Name="r38" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/6H.png"/>
+        <Image Name="r39" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/5H.png" />
+        <Image Name="r310" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/4H.png" />
+        <Image Name="r311" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/3H.png" />
+        <Image Name="r312" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/2H.png" />
+        <Image Name="r313" Grid.Column="3" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/AH.png" />
 
 
-        <Canvas Name="r6v1" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
-        <Canvas Name="r6v2" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Gray"/>
-        <Canvas Name="r6v3" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
-        <Canvas Name="r6v4" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Gray"/>
-        <Canvas Name="r6v5" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,40,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
+        <Image Name="r4v1" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r4v2" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r4v3" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,20,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
 
-        <Canvas Name="r61" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r62" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r63" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r64" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r65" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r66" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r67" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r68" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r69" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r610" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r611" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r612" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r613" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
+        <Image Name="r41" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/KS.png" />
+        <Image Name="r42" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/QS.png" />
+        <Image Name="r43" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/JS.png" />
+        <Image Name="r44" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/10S.png" />
+        <Image Name="r45" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/9S.png" />
+        <Image Name="r46" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/8S.png" />
+        <Image Name="r47" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/7S.png" />
+        <Image Name="r48" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/6S.png" />
+        <Image Name="r49" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/5S.png" />
+        <Image Name="r410" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/4S.png" />
+        <Image Name="r411" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/3S.png" />
+        <Image Name="r412" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/2S.png" />
+        <Image Name="r413" Grid.Column="4" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/AS.png" />
 
 
-        <Canvas Name="r7v1" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
-        <Canvas Name="r7v2" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Gray"/>
-        <Canvas Name="r7v3" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
-        <Canvas Name="r7v4" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Gray"/>
-        <Canvas Name="r7v5" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,40,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Black"/>
-        <Canvas Name="r7v6" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,50,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Gray"/>
+        <Image Name="r5v1" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r5v2" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r5v3" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,20,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r5v4" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
 
-        <Canvas Name="r71" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r72" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r73" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r74" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r75" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r76" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r77" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r78" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r79" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r710" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r711" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
-        <Canvas Name="r712" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Blue"/>
-        <Canvas Name="r713" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Red"/>
+        <Image Name="r51" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r52" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png"/>
+        <Image Name="r53" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r54" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r55" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r56" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r57" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r58" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r59" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r510" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r511" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r512" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r513" Grid.Column="5" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+
+
+        <Image Name="r6v1" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r6v2" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r6v3" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,20,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r6v4" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r6v5" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,40,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+
+        <Image Name="r61" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r62" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r63" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r64" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r65" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r66" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r67" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png"/>
+        <Image Name="r68" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r69" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r610" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r611" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r612" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r613" Grid.Column="6" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+
+
+        <Image Name="r7v1" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r7v2" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png"/>
+        <Image Name="r7v3" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,20,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r7v4" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png"/>
+        <Image Name="r7v5" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,40,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r7v6" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,50,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+
+        <Image Name="r71" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r72" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,30,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r73" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r74" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,90,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r75" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,120,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r76" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r77" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,180,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r78" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,210,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r79" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,240,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r710" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,270,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r711" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,300,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r712" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,330,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
+        <Image Name="r713" Grid.Column="7" HorizontalAlignment="Center" Height="150" Width="110" Margin="0,360,0,0" Grid.Row="2" VerticalAlignment="Top" AllowDrop="True" Source="Images/transp.png" />
 
         <Label x:Name="l_p1" Content="Player 1" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top"  FontSize="20" Width="100" Height="40" Foreground="White" />
         <Label x:Name="l_p2" Content="Player 2" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="20" Width="100" Height="40" Foreground="White" />

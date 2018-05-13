@@ -39,6 +39,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Presentation" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -57,7 +59,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ImageSourceConverter.cs" />
     <Compile Include="Netzwerk.cs" />
+    <Compile Include="OverlapConverter.cs" />
     <Compile Include="Registrierblatt.xaml.cs">
       <DependentUpon>Registrierblatt.xaml</DependentUpon>
     </Compile>
@@ -186,6 +190,9 @@
     <Resource Include="Images\QS.png" />
     <Resource Include="Images\red_back.png" />
     <Resource Include="Images\yellow_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\transp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

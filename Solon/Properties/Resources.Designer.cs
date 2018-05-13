@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Solon.Properties
+namespace Client.Properties
 {
 
 

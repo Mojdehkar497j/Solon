@@ -10,24 +10,39 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Apex.MVVM;
-using Apex.Extensions;
+using System;
+using System.Collections.ObjectModel;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
 
-namespace Solon
+namespace Client
 {
     /// <summary>
     /// Interaktionslogik für Spiel.xaml
     /// </summary>
     public partial class Spiel : Window
     {
+        //private readonly ObservableCollection<Karte> cards = new ObservableCollection<Karte>();
+        //private readonly ObservableCollection<Karte> cards2 = new ObservableCollection<Karte>();
 
         public Spiel()
         {
             InitializeComponent();
 
-            xxx.Source = new BitmapImageSource()
+            //xxx.Source = new BitmapImageSource()
             
+            
+        }
+
+        private void Drop(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
             
         }
     }

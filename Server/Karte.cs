@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Server
+namespace Client
 {
     class Karte
     {
@@ -13,6 +13,7 @@ namespace Server
         private Farbe farbe;
         private Typ typ;
         private Wert wert;
+
 
         public bool Verdeckt
         {
@@ -36,12 +37,18 @@ namespace Server
             set { wert = value; }
         }
 
-        public Karte(Farbe farbe, Typ typ, Wert wert, bool verdeckt)
+        public int Overlap { get; }
+
+        public string ImageSource { get; }
+
+        public Karte(Farbe farbe, Typ typ, Wert wert, bool verdeckt, string cardImage, int overlap)
         {
             Farbe = farbe;
             Typ = typ;
             Wert = wert;
             Verdeckt = verdeckt;
+            ImageSource = cardImage;
+            Overlap = overlap;
         }
 
         
