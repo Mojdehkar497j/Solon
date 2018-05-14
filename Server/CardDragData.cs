@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 
 namespace Solon
 {
-    internal sealed class CardDragData
+    public class CardDragData
     {
         public CardDragData(ObservableCollection<Karte> cards, Karte card)
         {

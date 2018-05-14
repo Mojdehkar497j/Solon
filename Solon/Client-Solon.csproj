@@ -68,6 +68,9 @@
       <DependentUpon>Spiel.xaml</DependentUpon>
     </Compile>
     <Compile Include="OverlapConverter.cs" />
+    <Compile Include="SpielViewModel.cs" />
+    <Compile Include="Statistiken.cs" />
+    <Compile Include="TimeSpanToShortStringConverter.cs" />
     <Page Include="Auswahl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -193,6 +196,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\transp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Server\Server.csproj">
+      <Project>{3090abf9-173d-4b8b-b07c-682064044285}</Project>
+      <Name>Server</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

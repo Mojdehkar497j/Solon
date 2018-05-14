@@ -9,23 +9,25 @@ using System.Windows.Media.Imaging;
 
 namespace Solon
 {
-    public class OverlapConverter : MarkupExtension, IValueConverter
-    {
-        public override object ProvideValue(IServiceProvider serviceProvider)
-        {
-            return this;
-        }
+    //public class OverlapConverter : MarkupExtension, IValueConverter
+    //{
+    //    #region OverlapConverter Members
+    //    public override object ProvideValue(IServiceProvider serviceProvider)
+    //    {
+    //        return this;
+    //    }
 
 
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            int overlap = (int)value;
-            return new Thickness(0, -overlap, 0, 0);
-        }
+    //    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    //    {
+    //        int overlap = (int)value;
+    //        return new Thickness(0, -overlap, 0, 0);
+    //    }
 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new NotImplementedException();
-        }
-    }
+    //    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+    //    #endregion
+    //}
 }
